@@ -1,0 +1,37 @@
+#container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#container > div {
+    color: white;
+    flex: 1 0 auto;
+    aspect-ratio: 1 / 1;
+    flex-basis: var(--size);
+    height: auto;
+    box-sizing: border-box;
+    border: 0.1px solid grey;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+#container > div:before {
+    /* Create a pseudo-element with a padding-top of 100% to maintain a square aspect ratio */
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+#button {
+    margin: 0 50%;
+    position: relative;
+    left: -50px;
+    width: 80px;
+    height: 40px;
+    background-color: white;
+    color: gray;
+    font-size: 12px;
+    border-radius: 10px;    
+}
